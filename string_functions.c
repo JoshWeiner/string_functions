@@ -12,17 +12,21 @@ int string_len(char* str){
   return ans;
 }
 
-char * stringn_copy(char* dest, char*source){
-  return 0;
+char * string_ncopy(char * dest, char*source, int n){
+  while (n) {
+    *(dest + n) = *(source + n);
+    n --;
+  }
+  return dest;
 }
 
-int string_comp( char* str1, char* str2 ){
-  while(*str1 && *str2){
-    if(*str1 != *str2){
-      return (*str1 - *str2);
+int string_comp( char* s1, char* s1 ){
+  while(*s1 && *s2){
+    if(*s1 != *s2){
+      return (*s1 - *s2);
     }
-    str1++;
-    str2++;
+    s1++;
+    s2++;
   }
   return 0;
 }
@@ -37,4 +41,9 @@ int main(){
   printf("\n Testing string_len(s1) function: \n");
   printf("System's length of |%s| : %d \n",s1, strlen(s1));
   printf("My length of |%s| : %d \n",s1, string_len(s1));
+  
+  printf("\n Testing string_ncopy(s1) function: \n");
+  printf("System's copy of |%s| and |%s|  : %s \n",s1, s2, strncpy(s1, s2, 4));
+  printf("My copy of |%s| and |%s| : %s \n",s1, s2, string_ncopy(s1, s2, 4));
+  
 }
