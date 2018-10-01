@@ -76,10 +76,14 @@ int main(){
   char three[] = "squirtle";
   char cuatro[20] = "pikachu";
   char cinco[20] = "squirtle";
-  
+
   printf("\n Testing string_cat(dos, tres) function: \n");
   printf("System's cat of |%s| and |%s|  : %s \n", cuatro, cinco, strcat(cuatro, cinco) );
   printf("My copy of |%s| and |%s| : %s \n",cuatro, cinco, string_cat(cuatro, cinco) );
+
+  printf("\n Testing string_comp(dos, tres) function: \n");
+  printf("System's comp of |%s| and |%s|  : %d \n", two, three, strcmp(two, three) );
+  printf("My comp of |%s| and |%s| : %d \n",two, three, string_comp(two, three) );
 
   printf("\n Testing string_chr(uno, 4) function: \n");
   printf("System's chr of |%s| for 'a' : %s \n", one, strchr(one, 'a') );
