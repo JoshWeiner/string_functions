@@ -1,12 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-//#include "string_functions.h"
+#include "string_functions.h"
 
 int string_len(char string[]){
   int i = 0;
   int ans = 0;
   while (string[i] != 0){
+    i++;
     ans++;
   }
   return ans;
