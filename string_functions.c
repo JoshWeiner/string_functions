@@ -36,5 +36,5 @@ int main(){
   
   printf("\n Testing string_len(s1) function: \n");
   printf("System's length of |%s| : %d \n",s1, strlen(s1));
-  printf("My length of |%s| : %d \n",charizard, string_len(charizard));
+  printf("My length of |%s| : %d \n",s1, string_len(s1));
 }
